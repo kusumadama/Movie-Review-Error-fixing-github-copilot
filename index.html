@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Review Site</title>
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Upcoming</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="theme-toggle">
+        <label for="theme-toggle">Toggle Dark/Light Mode</label>
+        <input type="checkbox" id="theme-toggle" aria-label="Toggle dark/light mode">
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="search-container">
+        <label for="search-input">Search...</label>
+        <input type="text" id="search-input" placeholder="Search...">
+      </div>
+      <div class="latest-reviews">
+        <!-- Latest reviews/trailers content -->
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>Movie Reviews</h2>
+      <div class="movie-details">
+        <!-- Movie details, ratings, and user comments -->
+      </div>
+    </section>
+
+    <section class="upcoming">
+      <h2>Upcoming Movies</h2>
+      <div class="search-container">
+        <label for="upcoming-search">Search by Title/Genre/etc.</label>
+        <input type="text" id="upcoming-search" placeholder="Search by Title/Genre/etc.">
+      </div>
+      <div class="filters">
+        <!-- Filters for upcoming movies -->
+      </div>
+      <div class="movie-grid">
+        <!-- Upcoming movies grid/list -->
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About</h2>
+      <!-- About page content -->
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <!-- Contact page content -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <!-- Social links -->
+    </div>
+  </footer>
+
+  <script>
+    // Toggle dark/light mode
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('change', () => {
+      body.classList.toggle('dark-mode');
+    });
+
+    // Fetch data from APIs and populate movie sections
+    // Add event listeners for search, filters, and user interactions
+    // Implement rating system, user authentication, and social sharing
+  </script>
+</body>
+</html>
